@@ -1,4 +1,4 @@
-
+# Subsidiedossiers export
 
 
 De dossiers met nummer “0-subsidie” moeten niet omgezet worden naar Kaleidos en de publicatie-module. 
@@ -19,15 +19,10 @@ We schrijven ze weg in een CSV-bestand met volgende velden:
   - Datum Vloeiboek terug van m-p
   - Datum Verspreiding
 
+
 ```sh
 docker build -t "ovrb-subsidie-export" .
-docker run -v "./access_export_folder:/data" ovrb-subsidie-export
+docker run -v "/path/to/access/export/folder:/data" ovrb-subsidie-export
 ```
 
 output will appear aside the xml input file.
-
-
-```sh
-docker build -t "ovrb-subsidie-export" .
-docker run -v "/home/michael/rpio/projects/KAS-kaleidos/data/export data access Publicaties/:/data" ovrb-subsidie-export
-```
